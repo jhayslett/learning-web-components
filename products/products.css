@@ -1,0 +1,273 @@
+section,article,header,footer,nav,aside,hgroup {
+	display: block;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    background-color: #F5F5F5;
+    padding-bottom: 125px;  /* disable when shopping cart goes away */
+}
+
+h1{
+	margin: 0;
+}
+
+/*  Basic classes */
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+/* Main Header */
+
+.mainHeader {
+	background-color: #0288D1;
+	box-shadow: 0 5px 5px rgba(0,0,0,.15);
+}
+
+.mainHeader h1 {
+	padding: 10px 15px 15px 15px;
+	color: #FFF;
+	font-weight: 600;
+}
+
+/*  Products Area */
+
+.products {
+    max-width: 80%;
+    min-width: 500px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item {
+    box-sizing: border-box;
+    border-bottom: 1px solid #BDBDBD;
+    margin: 20px 10px;
+    width: 180px;
+    overflow: auto;
+    position: relative;
+    float: left;
+}
+
+.item:hover {
+	background: rgba(0,0,0,.05);
+	border-bottom: 1px solid #0288D1;
+}
+
+.item h1 {
+	padding: 0 6px;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.item p {
+	margin: 0;
+	padding: 0px 6px 10px 6px;
+	font-size: .85em;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+ /* Add to Cart Section */
+
+.item .footer {
+	overflow: hidden;
+	padding: 0px 10px 10px 0px;
+}
+
+.item i {
+    float: right;
+	border-radius: 50%;
+}
+
+.item i.green {
+	color: #fff;
+	background-color: #3FC380;
+}
+
+.item i.green:hover {
+	color: #1E824C;
+	cursor: pointer;
+}
+
+.item i.red {
+	color: #fff;
+	background-color: #D91E18;
+}
+
+.item i.red:hover {
+	color: #96281B;
+	cursor: pointer;
+}
+
+.item input[type=number] {
+    float: right;
+    font-size: 1em;
+    width: 30px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+}
+
+.item input[type=number]:focus {
+    outline: none;
+}
+
+
+/*Hide the arrows on number input*/
+
+.item input[type=number]::-webkit-inner-spin-button,
+.item input[type=number]::-webkit-outer-spin-button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+/*Shopping Cart*/
+
+.shoppingCart {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    box-shadow: 3px 0px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background: inherit;
+}
+
+/* Shopping Cart Header */
+
+.shoppingCart>header {
+	background-color: #2C3E50;
+	color: #FFF;
+	overflow: hidden;
+}
+
+.shoppingCart>header>h1 {
+	padding: 5px 0 5px 10px;
+	float: left;
+}
+
+.totalSection {
+	float: right;
+	height: 100%;
+}
+
+.totalSection p,
+.totalSection i {
+	display: inline-block;
+}
+
+.totalSection p {
+	margin: 0;
+	padding: 12px 20px 10px 20px;
+	height: 100%;
+	vertical-align: middle;
+	background-color: #26A65B;
+}
+
+.totalSection i {
+	border-radius: 50%;
+	background-color: #D91E18;
+	font-size: 1.5em;
+	color: #fff;
+	margin: 0;
+	margin-right: 12px;
+	vertical-align: middle;
+	margin-left: 12px;
+}
+
+.totalSection i:hover {
+	cursor: pointer;
+	color: #96281B;
+}
+
+.shoppingCart>header>p {
+}
+
+.grandTotal {
+	font-style: normal;
+}
+
+/* Shopping Cart Listings */
+
+.itemReview {
+	overflow: auto;
+ 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background: rgba(25,25,25,.04);
+	height: 100%;
+}
+
+.scItem {
+	width: 100px;
+	margin: 5px 3px 5px 10px;
+	float: left;
+}
+
+.scItem:hover {
+	background-color: rgba(0,0,0,.05);
+}
+
+.scItem>header>h1 {
+	padding: 2px 0 2px 5px;
+	background-color: #2C3E50;
+	color: #E4F1FE;
+	font-weight: 400;
+	font-size: .9em;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.scItem>header>h1:hover {
+	background-color: #364d63;
+}
+
+.scItem>header>h1:active {
+	background-color: #243342;
+}
+
+.scItem p.qty {
+	padding-left: 5px;
+}
+
+.scItem p,
+.scItem i {
+	font-size: .7em;
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+	padding-bottom: 5px;
+}
+
+.scItem i {
+	color: #D91E18;
+}
+
+.scItem i:hover {
+	color: #000;
+	cursor: pointer;
+	background: ;
+}
+
+.right {
+	float: right;
+	padding-right: 5px;
+}
