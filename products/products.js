@@ -27,19 +27,19 @@ products.item04 = {
 };
 
 products.item05 = {
-	name: "Item 04",
+	name: "Item 05",
 	price: "32.54",
 	description: "Gasoline front throw lawnmower"
 };
 
 products.item06 = {
-	name: "Item 04",
+	name: "Item 06",
 	price: "32.54",
 	description: "Gasoline front throw lawnmower"
 };
 
 products.item07 = {
-	name: "Item 04",
+	name: "Item 07",
 	price: "32.54",
 	description: "Gasoline front throw lawnmower"
 };
