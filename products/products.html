@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Products</title>
+	<link rel="stylesheet" type="text/css" href="products.css">
+	<script type="text/javascript" src="../../utilities/utilities.js"></script>
+</head>
+<body>
+<header class="mainHeader">
+<div>
+	<h1>Company Name</h1>
+	<aside>
+		<p><a href="#">Link 1</a></p>
+		<p><a href="#">Link 2</a></p>
+		<p><a href="#">Link 3</a></p>
+	</aside>
+	</div>
+</header>
+ <!-- 
+
+ Emmet code to produce the following
+
+ article.products>((section.item>header>img[src="http://placehold.it/180x100"]+h1{Item$}^p{This is  some information about this product. The title of this product is Product $}+div.footer>i.material-icons.green{add}+input:number[value="1"]+i.material-icons.red{remove})*5) 
+
+ -->
+<article class="main">
+	<header>Products</header>
+	<article class="products noselect">
+	</article>
+</article>
+<aside class="shoppingCart">
+	<aside class="cartButton">
+		<i class="material-icons">add</i>
+	</aside>
+	<header>
+		<h1>Shopping Cart</h1>
+		</div>
+	</header>
+	<article class="itemReview">
+	</article>
+	<footer>
+		<div class="coupons"><p>Coupon Code</p><input type="text"><i class="material-icons orange">done</i></div>
+		<div class="totalSection"><p>Total: <em class="grandTotal"></em></p>
+		<input type="submit" value="Checkout Page">
+	</footer>
+</aside>
+</body>
+<script type="text/javascript" src="products.js"></script>
+
+</html>
