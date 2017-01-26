@@ -211,11 +211,38 @@
 			<option value="YAKT - UTC+09">YAKT - UTC+09</option>
 			<option value="YEKT - UTC+05">YEKT - UTC+05</option>
 		</select></label>
-		<label class="message">Message:<textarea name="message">
-		</textarea></label>
+		<label class="message">Message:<textarea name="message"></textarea></label>
 		<label>Number:<input type="number" name="number"></label>
 		<label>Email:<input type="email" name="email"></label>
 		<input type="submit" title="Submit">
 	</form>
 </body>
+<script src="/utilities/validator.js"></script>
+<script>
+
+// GATHER AND DEFINE ALL HTML ELEMENTS
+
+var form = document.querySelector("form");
+var formDate = document.querySelector("input[type=date]");
+var formTime = document.querySelector("input[type=time]");
+var formTimezone = document.querySelector("select");
+var formMessage = document.querySelector("textarea");
+var formNumber = document.querySelector("input[type=number]");
+var formEmail = document.querySelector("input[type=email]");
+
+// ACTION TO VALIDATE ON SUBMIT BUTTON CLICK
+
+form.addEventListener("submit", function(e){
+	
+	checkEmptyAndDate(formDate, e);
+	checkEmptyAndDate(formTime, e);
+	checkNotEmpty(formTimezone, e);
+	checkNotEmpty(formTime, e);
+	checkEmptyAndLengthGreater(formMessage, 5, e);
+	checkEmptyAndLengthIs(formNumber, 10, e);
+	checkEmptyAndEmail(formEmail, e);
+
+}, false);
+
+</script>
 </html>

@@ -272,6 +272,36 @@
 			<option value="Zambia">
 			<option value="Zimbabwe">
 		</datalist>
+		<input type="submit" title="Submit">
 	</form>
 </body>
+<script src="/utilities/validator.js"></script>
+<script>
+
+// GATHER AND DEFINE ALL HTML ELEMENTS
+
+var form = document.querySelector("form");
+var textElements = document.querySelectorAll("input[type=text]");
+var numberElements = document.querySelectorAll("input[type=number]");
+var dropElements = document.querySelectorAll("input[type=dropdown]");
+
+// ACTION TO VALIDATE ON SUBMIT BUTTON CLICK
+
+form.addEventListener("submit", function(e){
+	var count = textElements.length;
+	for(var i = 0; i < count; i++) {
+		checkNotEmpty(textElements[i], e);
+	}
+	var count = numberElements.length;
+	for(var i = 0; i < count; i++) {
+		checkNotEmpty(numberElements[i], e);
+	}
+	var count = dropElements.length;
+	for(var i = 0; i < count; i++) {
+		checkNotEmpty(dropElements[i], e);
+	}
+
+}, false);
+
+</script>
 </html>

@@ -143,4 +143,23 @@
 		<input type="submit" name="submit">
 	</form>
 </body>
+<script src="/utilities/validator.js"></script>
+<script>
+
+// GATHER AND DEFINE ALL HTML ELEMENTS
+
+var form = document.querySelector("form");
+var formBooks = document.querySelector("input");
+var formCategories = document.querySelector("select");
+
+// ACTION TO VALIDATE ON SUBMIT BUTTON CLICK
+
+form.addEventListener("submit", function(e){
+	
+	checkNotEmpty(formBooks, e);
+	checkNotEmpty(formCategories, e);
+
+}, false);
+
+</script>
 </html>
